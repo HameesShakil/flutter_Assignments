@@ -1,1 +1,124 @@
+void main()
+{
+  //Assignment No 5
+  //--------------------------------------------------------------
+  //Q.1) Create a list of names and print all names using list.
+  print("-------------------------------------");
+  print("=> Question - 1 Output <= ");
+  List Hamees = ["Owais","Hamza","Ali Shaikh","Abdullah"];
+  print(Hamees);
+  print("-------------------------------------");
 
+  // Q.2) Create a list of Days and print only  Sunday
+  print("=> Question - 2 Output <= ");
+  List days = ["Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday","sunday"];
+  print(days[6]);
+  print("-------------------------------------");
+
+  // Q.3) create a list  of name, class, roll no, grade, percentage. And print. 
+  print("=> Question - 3 Output <= ");
+  List Std_Details = ["Name: Hamees","Class: Flutter_Class","RollNo: 54221","Grade : AVP-1","Percentage: 85%"];
+  print(Std_Details);
+  print("-------------------------------------");
+
+  // Q.4) Create a list of numbers & write a program to get the smallest & greatest number from a list.
+
+  print("=> Question - 4 Output <= ");
+  List<int> numbers = [12, 45, 7, 89, 23, 5, 1000, 34];
+  int smallest = numbers[0];
+  int greatest = numbers[0];
+  for (int i = 1; i < numbers.length; i++) {
+    if (numbers[i] < smallest) {
+      smallest = numbers[i];
+    } 
+    else if (numbers[i] > greatest) {
+      greatest = numbers[i];
+    }
+  }
+  print('Smallest Number: $smallest');
+  print('Greatest Number: $greatest');
+  print("-------------------------------------");
+
+  //Q.5) Given a list of integers, write a dart code that returns the maximum value from the list.
+  print("=> Question - 5 Output <= ");
+  List<int> num = [8, 3, 14, 6, 25, 10];
+   int max = num[0];
+
+  for (int i = 1; i < num.length; i++) {
+    if (num[i] > max) {
+      max = num[i];
+    }
+  }
+  print('Maximum value: $max');
+  print("-------------------------------------");
+  // Q.6: Write a Dart code that takes in a list of strings and prints a new list with the elements in reverse order. The original list should remain 
+  // unchanged.
+  print("=> Question - 6 Output <= ");
+  List<String> originalList = ['Hamees', 'Owais', 'Imran', 'Rizwan'];
+  List<String> revli = List.from(originalList.reversed);
+
+  print('Original List: $originalList');
+  print('Reversed List: $revli');
+  print("-------------------------------------");
+
+  // Q.7: Implement a Dart code that uses the where() method to filter out negative numbers from a list of integers. 
+  //The program should take in the original list as a parameter and print a new list containing only the positive numbers.
+  print("=> Question - 7 Output <= ");
+  List<int> newnum = [3, -5, 7, -2, 0, 8];
+  List<int> positive = newnum.where((n) => n >= 0).toList();
+
+  print(positive);
+  print("-------------------------------------");
+
+  // Q.8) remove all false values from below list by using removeWhere or retainWhere property.
+  //List<String> usersEligibility = ['John', 'Alice', 'eligible', 'Mike', 'Sarah', 'Tom'];
+  print("=> Question - 8 Output <= ");
+  List<String> usersEligibility = ['John', 'Alice', 'eligible', 'Mike', 'Sarah', 'Tom'];
+  usersEligibility.removeWhere((item) => item ! == 'eligible');
+  print(usersEligibility);
+
+  List<String> usersEligibility1 = ['John', 'Alice', 'eligible', 'Mike', 'Sarah', 'Tom'];
+  usersEligibility1.retainWhere((item) => item  == 'eligible');
+  print("Second retain method");
+  print(usersEligibility1);
+  print("-------------------------------------");
+
+  //Q.9) Create a map named "car" with the following key-value pairs: "brand" as "Toyota", "color" as "Red", 
+  // "isSedan" as true. Write Dart code to check if the car is a sedan and red in color. 
+  // Print "Match" if both conditions are true, otherwise print "No match".
+  print("=> Question - 9 Output <= ");
+  Map car = {
+    //key : value
+    "brand": "Toyota",
+    "color": "Red",
+    "isSedan": true,
+  };
+
+   if (car['isSedan'] == true && car['color'] == 'Red') {
+    print('Match');
+  } else {
+    print('No match');
+  }
+  print("-------------------------------------");
+
+  // Q.10: Given a map representing a user with keys "name", "isAdmin", and "isActive", write Dart code to check if 
+  //the user is an active admin. If the user is both 
+  // an admin and active, print "Active admin", otherwise print "Not an active admin".
+  print("=> Question - 10 Output <= ");
+  Map user = {
+    'name': 'Alice',
+    'isAdmin': true,
+    'isActive': true,
+  };
+
+  if (user['isAdmin'] == true && user['isActive'] == true)
+  {
+    print('Active admin');
+  } 
+  else 
+  {
+    print('Not an active admin');
+  }
+}
+
+ 
