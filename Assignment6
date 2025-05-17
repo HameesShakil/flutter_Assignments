@@ -1,0 +1,201 @@
+import 'dart:convert';
+import 'dart:io';
+import 'dart:math';
+void main()
+{
+  print("Assignment no 6");
+  print("=============================");
+  // Q1. Write a Dart program that counts the number of digits in a given number using a while loop.
+  print("Question - 1 Output");
+  stdout.write('Enter a number: ');
+  int number = int.parse(stdin.readLineSync()!);
+  int count = 0;
+  number = number.abs();
+  if (number == 0) {
+    count = 1;
+  } else {
+    while (number > 0) {
+      number ~/= 10; 
+      count++;
+    }
+  }
+  print('Number of digits: $count');
+  print("======================================");
+
+  //Q2. Implement Dart code to generate a random password of a given length using a while loop..
+  print("Question - 2 Output");
+  int length = 8; 
+  String chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  String password = '';
+  Random random = Random();
+  int i = 0;
+
+  while (i < length) {
+    int index = random.nextInt(chars.length);
+    password += chars[index];
+    i++;
+  }
+
+  print('Generated password: $password');
+  print("======================================");
+
+  //Q3. Create a Dart program that checks if a given string is empty or not using if-else statements.
+  print("Question - 3 Output");
+    stdout.write('Enter a string: ');
+    String input = stdin.readLineSync()!;
+  if (input.isEmpty) {
+    print('The string is empty.');
+  } else {
+    print('The string is not empty.');
+  }
+  print("======================================");
+  //Q4. Implement Dart code to print the multiplication table of a given number using a while loop
+  print("Question - 4 Output");
+  stdout.write('Enter a number: ');
+  int number1 = int.parse(stdin.readLineSync()!);
+
+  int j = 1;
+  while (j <= 10) {
+    print('$number1 x $j = ${number1 * j}');
+    j++;
+  }
+  print("======================================");
+  //Q5. Write a Dart program to calculate the sum of odd numbers from 1 to 50 using a do-while loop.
+  print("Question - 5 Output");
+  int a = 1;
+  int sum = 0;
+
+  do {
+    if (a % 2 != 0) {
+      sum += a;
+    }
+    a++;
+  } while (a <= 50);
+
+  print('Sum of odd numbers from 1 to 50 is: $sum');
+  print("======================================");
+  //Q5. Create a Dart program that checks if a given number is positive, negative, or zero using if-else statements.
+  print("Question - 5 (Part2) - Output");
+  stdout.write('Enter a number: ');
+  double num = double.parse(stdin.readLineSync()!);
+
+  if (num > 0) {
+    print('The number is positive.');
+  } else if (num < 0) {
+    print('The number is negative.');
+  } else {
+    print('The number is zero.');
+  }
+  print("======================================");
+  //Q6. Write a Dart program to calculate the factorial of a given number using a while loop.
+  print("Question - 6 Output");
+  stdout.write('Enter a positive integer: ');
+  int n1 = int.parse(stdin.readLineSync()!);
+
+  int factorial = 1;
+  int g = 1;
+
+  while (g <= n1) {
+    factorial *= g;
+    g++;
+  }
+
+  print('Factorial of $n1 is: $factorial');
+  print("======================================");
+  //Q7. Create a Dart program that prints the first 10 prime numbers using a for loop..
+//   print("Question - 7 Output");
+//   void main() {
+//   int count = 0;
+//   int number = 2;
+  
+//   print('The first 10 prime numbers are:');
+//   while (count < 10) {
+//     if (isPrime(number)) {
+//       print(number);
+//       count++;
+//     }
+//     number++;
+//   }
+// }
+
+// // Helper function to check if a number is prime
+// bool isPrime(int num) {
+//   if (num < 2) return false;
+//   for (int i = 2; i <= num ~/ 2; i++) {
+//     if (num % i == 0) return false;
+//   }
+//   return true;
+// }
+
+//Q8. Implement Dart code to print the first 10 natural numbers in reverse order using a while loop.
+ print("Question - 8 Output");
+int n= 10;
+
+while( n>=1 )
+{
+  print("Natural number = ${(n)}");
+  n--;
+}
+print("======================================");
+
+//Q9. Implement Dart code to print the squares of numbers from 1 to 5 using a do-while loop..
+ print("Question - 9 Output");
+int abc = 1;
+do{
+  print('Square of $abc is ${abc * abc}');
+  abc++;
+}
+while (abc <= 5);
+print("======================================");
+//Q10. Create Dart code to calculate the average of numbers in a list using a do-while loop.
+ print("Question - 10 Output");
+List<int> numbers1 = [55,44,22,10,15,50,60,1000];
+int  ij = 0;
+int sum1 = 0;
+
+do{
+  sum1 += numbers1[ij];
+  ij++;
+}
+while(ij < numbers1.length);
+print("Average ${sum1 / numbers1.length}");
+print("======================================");
+//Q11. Write a Dart program to find the largest digit of a given number using a do-while loop...
+ print("Question - 11 Output");
+int numbers = 56987563;
+  int maxDigit = 0;
+
+  do {
+    int digit = numbers % 10;
+    if (digit > maxDigit) {
+      maxDigit = digit;
+    }
+    numbers ~/= 10;
+  } while (numbers > 0);
+
+  print('Largest digit is: $maxDigit');
+  print("======================================");
+//Q12. Write a Dart program to print even numbers from 1 to 20 using a do-while loop..
+ print("Question - 12 Output");
+ int xyz = 1;
+  do {
+    if (xyz % 2 == 0) {
+      print(xyz);
+    }
+    xyz++;
+  } while (xyz <= 20);
+  print("======================================");
+  //Q13. Write a program that prints the Fibonacci sequence up to a given number using a for loop.
+  print("Question - 13 Output");
+  int limit = 50; 
+  int a = 0;
+  int b = 1;
+  print("Fibonacci sequence up to $limit:");
+  for (int i = 0; a <= limit; i++) {
+    print(a);
+    int next = a + b;
+    a = b;
+    b = next;
+  }
+}
+
