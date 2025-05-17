@@ -1,0 +1,94 @@
+import 'dart:io';
+
+void main()
+{
+  print("Assignment No 7");
+  print("==========================");
+  // Revise the Topics
+  // 1. Data Types
+  // 2. List
+  // 3. Map
+  // 4. Loop
+  // 5.  if-else
+  // 6. functions
+
+  // 1. Data Types
+  print("---> Data Type");
+  // Create a user details information system on PC store Name, Age, & Height.
+  print("==[Question 1]==");
+  String Name;
+  int age;
+  double Height;
+  print("Enter your name");
+  String name = stdin.readLineSync()!;
+  print("Enter your Age");
+  String age1 = stdin.readLineSync()!;
+  print("Enter your Height");
+  String hei = stdin.readLineSync()!;
+  print("==============================");
+  print("Your Name is: ${(name)}");
+  print("Your Age is: ${(age1)}");
+  print("Your Height is: ${(hei)}");
+  print("==============================");
+  
+  print("---> List");
+  print("==[Question 2]==");
+  List<String> shoppingList = ["Milk", "Eggs", "Bread", "Butter", "Cheese"];
+  print("First item: ${shoppingList.first}");
+  print("Last item: ${shoppingList.last}");
+  shoppingList.removeAt(2);
+  print("Updated List: $shoppingList");
+  print("==============================");
+
+  print("---> MAP");
+  print("==[Question 3]==");
+  Map<String, dynamic> student = {
+    "name": "Hamees",
+    "rollNumber": 1234,
+    "marks": 99
+  };
+  student["grade"] = "A";
+  student.forEach((key, value) {
+    print("$key: $value");
+  });
+  print("==============================");
+
+  print("---> Loop");
+  print("==[Question 4]==");
+    List<int> numbers = [10, 7, 1, 9, 2];
+  int sum = 0;
+
+  for (int i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+    print("Index $i: ${numbers[i]}");
+  }
+  print("Sum: $sum");
+  print("==============================");
+
+  print("---> IF-Else");
+  print("==[Question 5]==");
+  int age = 16;
+  if (age < 13) {
+    print("Child");
+  } else if (age >= 13 && age <= 19) {
+    print("Teenager");
+  } else {
+    print("Adult");
+  }
+  print("==============================");
+
+  print("---> Functions");
+  print("==[Question 6]==");
+  int num1 = 4;
+  int num2 = 7;
+  print("${num1} is ${isEven(num1) ? "even" : "odd"}");
+  print("${num2} is ${isEven(num2) ? "even" : "odd"}");
+  }
+
+  bool isEven(int number) {
+  return number % 2 == 0;
+}
+
+
+
+
